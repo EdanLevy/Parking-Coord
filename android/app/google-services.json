@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "519432996127",
+    "project_id": "parking-coordinator",
+    "storage_bucket": "parking-coordinator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519432996127:android:548a604d2f6793c9d69c2a",
+        "android_client_info": {
+          "package_name": "com.edanlevy.park_cordinator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519432996127-m3u1jnur41t9pgbqgil1fcv11koa2q9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc61C1LHmQmJLH7sAH80T4q7DdihzR4gM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519432996127-m3u1jnur41t9pgbqgil1fcv11koa2q9f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "519432996127-b8l4abdlm3qmeh2ekp5tkfhtmnf5l5l3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.edanlevy.parkCordinator.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519432996127:android:bdce7019aaca1d23d69c2a",
+        "android_client_info": {
+          "package_name": "com.edanlevy.parking_coordinator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519432996127-m3u1jnur41t9pgbqgil1fcv11koa2q9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc61C1LHmQmJLH7sAH80T4q7DdihzR4gM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519432996127-m3u1jnur41t9pgbqgil1fcv11koa2q9f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "519432996127-b8l4abdlm3qmeh2ekp5tkfhtmnf5l5l3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.edanlevy.parkCordinator.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
