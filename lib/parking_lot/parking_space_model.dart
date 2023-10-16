@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-class ParkingSpaceModel {
+class ParkingSpaceModel extends ChangeNotifier {
   int spaceId;
   bool isOccupied;
   String occupiedByUserId;
@@ -15,6 +15,7 @@ class ParkingSpaceModel {
     isOccupied = true;
     occupiedByUserId = userId;
     occupiedSince = DateTime.now();
+    notifyListeners();
   }
 
   void vacate() {
@@ -22,6 +23,7 @@ class ParkingSpaceModel {
     isOccupied = false;
     occupiedByUserId = "";
     occupiedSince = DateTime.now();
+    notifyListeners();
   }
 
   @override

@@ -8,13 +8,3 @@ ParkingSpaceModel createParkingSpace(int spaceId) {
   return space;
 }
 
-final slots = <int,ParkingSpaceModel>{
-  1: createParkingSpace(1),
-  2: createParkingSpace(2),
-  3: createParkingSpace(3),
-  4: createParkingSpace(4),
-  5: createParkingSpace(5),
-  6: createParkingSpace(6),
-};
-
-final parkingLot = ParkingLot(slots);

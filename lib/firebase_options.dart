@@ -48,17 +48,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyDEsEmjrusIKWvmqTLLHY70SGMzICzr2Cg',
-    appId: '1:519432996127:web:dc602588f7736fabd69c2a',
+    appId: '1:519432996127:web:51cc47957245215ad69c2a',
     messagingSenderId: '519432996127',
     projectId: 'parking-coordinator',
     authDomain: 'parking-coordinator.firebaseapp.com',
     storageBucket: 'parking-coordinator.appspot.com',
-    measurementId: 'G-N9MS55XGT6',
+    measurementId: 'G-D2DVK7NDQ7',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBc61C1LHmQmJLH7sAH80T4q7DdihzR4gM',
-    appId: '1:519432996127:android:bdce7019aaca1d23d69c2a',
+    appId: '1:519432996127:android:0d7f83290976baabd69c2a',
     messagingSenderId: '519432996127',
     projectId: 'parking-coordinator',
     storageBucket: 'parking-coordinator.appspot.com',
@@ -66,7 +66,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyC2JdiWE3U2x7z6GWcMmH9xCqgrdjZlaJk',
-    appId: '1:519432996127:ios:6fa2fa1df8fdfff1d69c2a',
+    appId: '1:519432996127:ios:8783508f0e4029aad69c2a',
     messagingSenderId: '519432996127',
     projectId: 'parking-coordinator',
     storageBucket: 'parking-coordinator.appspot.com',

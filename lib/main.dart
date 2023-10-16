@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:parking_coordinator/user/user.dart';
+import 'package:parking_coordinator/user/user_service.dart';
 import 'package:provider/provider.dart';
 
-import 'firebase_options.dart';
 import 'home_screen.dart';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -42,10 +41,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: ChangeNotifierProvider<User>(
-          create: (ctx) => edan,
-          child: const HomeScreen(),
-        ));
+        home: const HomeScreen());
   }
 }
 
