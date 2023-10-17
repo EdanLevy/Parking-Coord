@@ -1,10 +1,12 @@
 import 'package:flutter/widgets.dart';
 
+import 'parking_lot_service.dart';
 import 'parking_space_model.dart';
 
 
 class ParkingLot extends ChangeNotifier {
   Map<int, ParkingSpaceModel> spaces;
+  final ParkingLotService _lotService = ParkingLotService();
 
   ParkingLot(this.spaces);
 
@@ -17,6 +19,7 @@ class ParkingLot extends ChangeNotifier {
       throw Exception("User $userId is already taking another space");
     }
     space.occupy(userId);
+    _lotService.occupySpace(space, userId);
     notifyListeners();
   }
 
@@ -36,6 +39,7 @@ class ParkingLot extends ChangeNotifier {
           "only ${space.occupiedByUserId} or admin can vacate it");
     }
     space.vacate();
+    _lotService.vacateSpace(space, userId);
     notifyListeners();
   }
 

@@ -1,13 +1,12 @@
 
 
-import 'dart:ffi';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:parking_coordinator/user/user.dart';
 
 class UserService {
   static const userCollectionName = 'users';
-  FirebaseFirestore db = FirebaseFirestore.instance;
+  final FirebaseFirestore _db = FirebaseFirestore.instance;
 
 
   bool userExists(String userId) {
@@ -15,7 +14,7 @@ class UserService {
   }
 
   createUser(String id, String displayName, String email) async {
-    await db.collection(userCollectionName).doc(id).set({
+    await _db.collection(userCollectionName).doc(id).set({
       'displayName': displayName,
       'email': email,
       'carNumber': "",
@@ -26,7 +25,7 @@ class UserService {
   }
 
   updateUser(User user) async {
-    await db.collection(userCollectionName).doc(user.id).update({
+    await _db.collection(userCollectionName).doc(user.id).update({
       'displayName': user.displayName,
       'email': user.email,
       'carNumber': user.carNumber,
@@ -37,7 +36,7 @@ class UserService {
   }
 
   Future<User> getUser(String userId) async {
-    var userDoc = await db.collection(userCollectionName).doc(userId).get();
+    var userDoc = await _db.collection(userCollectionName).doc(userId).get();
     if ( userDoc.data() == null) {
       return User(
         id: userId,

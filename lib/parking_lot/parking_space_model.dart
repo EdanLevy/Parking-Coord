@@ -4,17 +4,20 @@ class ParkingSpaceModel extends ChangeNotifier {
   int spaceId;
   bool isOccupied;
   String occupiedByUserId;
-  DateTime occupiedSince;
+  DateTime lastStatusChange;
 
-  ParkingSpaceModel(
-      this.spaceId, this.isOccupied, this.occupiedByUserId, this.occupiedSince);
+  ParkingSpaceModel(this.spaceId, this.isOccupied, this.occupiedByUserId, this.lastStatusChange);
 
   ParkingSpaceModel.create(spaceId) : this(spaceId, false, "", DateTime.now());
+
+  ParkingSpaceModel.fromFirestore(String id, Map<String, dynamic> data)
+      : this(int.parse(id), data['isOccupied'] ?? false, data['occupiedByUserId'] ?? "",
+            (data['lastStatusChange']).toDate() ?? DateTime.now());
 
   void occupy(String userId) {
     isOccupied = true;
     occupiedByUserId = userId;
-    occupiedSince = DateTime.now();
+    lastStatusChange = DateTime.now();
     notifyListeners();
   }
 
@@ -22,7 +25,7 @@ class ParkingSpaceModel extends ChangeNotifier {
     // todo: check if the user is admin or the user who occupied the space
     isOccupied = false;
     occupiedByUserId = "";
-    occupiedSince = DateTime.now();
+    lastStatusChange = DateTime.now();
     notifyListeners();
   }
 
@@ -32,7 +35,6 @@ class ParkingSpaceModel extends ChangeNotifier {
         "spaceId: $spaceId,\n"
         "isOccupied: $isOccupied,\n"
         "occupiedByUserId: $occupiedByUserId,\n"
-        "occupiedSince: $occupiedSince)";
+        "occupiedSince: $lastStatusChange)";
   }
-
 }

@@ -35,4 +35,8 @@ class AuthService {
       Log.error(ex.toString());
     }
   }
+
+  Future<void> signOut() async {
+    await FirebaseAuth.instance.signOut();
+  }
 }
